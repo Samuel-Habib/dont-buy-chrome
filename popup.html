@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zon't Zo It!</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+
+<button id="scanBuy">Scan for Buy Button</button>
+
+
+    <div id="main">
+
+        <h1 id="title">
+            Zon't Zo It!
+        </h1>
+
+        <!-- TODO: cycle between different title names as warnings -->
+
+        <div style="display: flex; justify-content: center;">
+            <img src="assets/wag.gif" alt="Dog wagging finger" />
+        </div>
+
+
+        <div>
+            <button id="goToNeed">NEED</button>
+            <button id="wantBtn">WANT</button>
+        </div>
+
+    </div>
+
+
+    <div id="need-view">
+        Needs should be your first priority, just be completely honest with yourself. Remember that there are still ways
+        to save on needs, so don't buy 100 dollars worth of toilet paper :)
+        <button class="back-to-main">
+            Back
+        </button>
+    </div>
+
+    <div id="want-view">
+        Wants are things that you would like to have, but are not necessary for your day-to-day life. It's important to
+        differentiate between needs and wants to maintain a healthy budget.
+        <button class="back-to-main">
+            Back
+        </button>
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
