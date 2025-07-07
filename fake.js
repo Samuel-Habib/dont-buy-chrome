@@ -1,7 +1,9 @@
 (function fake() {
   if (document.getElementById("dont-buy-popup")) return;
 
-  const wagGif = chrome.runtime.getURL("assets/wag.gif");
+  // const wagGif = chrome.runtime.getURL("assets/wag.gif");
+  const wagGifLicenced = `<iframe src="https://giphy.com/embed/W5TK77IYd83Qw9wSEi" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/Emoji-transparent-W5TK77IYd83Qw9wSEi">via GIPHY</a></p>`
+
 
   const wrapper = document.createElement("div");
   wrapper.id = "dont-buy-popup";
@@ -19,6 +21,8 @@
 
   // MAIN
 
+  
+
   const main = document.createElement("div");
   main.id = "dont-buy-main";
   wrapper.appendChild(main);
@@ -28,7 +32,7 @@
   title.style =
     "display: flex; justify-content: center; font-size: 20px; margin: 0;";
   main.appendChild(title);
-
+ 
   const titles = [
     "This isn't youuuuu",
     "Zon't zo it",
@@ -49,7 +53,9 @@
   img.src = wagGif;
   img.alt = "wag wag";
   img.style = "width: 100%; margin-bottom: 10px;";
-  main.appendChild(img);
+  // main.appendChild(img);
+
+  main.appendChild(wagGifLicenced);
 
   const needButton = document.createElement("button");
   needButton.id = "needBtn";
